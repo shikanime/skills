@@ -201,7 +201,7 @@ protection where present are the mechanical gate.** GitHub is the durable ledger
 | `AGENTS.md` with commit-body `Related:` URL     | Follow it (e.g. `manifests`) — overrides plain-English default                                  |
 | `doc:` prefix convention                        | Doc repo — use `doc:` titles                                                                    |
 | branch protection on `main`                     | PR mandatory; no direct push                                                                    |
-| jj repo (`.jj/`)                                | `jj bookmark track <branch> --remote=origin` before push                                         |
+| jj repo (`.jj/`)                                | `jj bookmark track <branch> --remote=origin` before push                                        |
 | NixOS/infra repo (`machines`, `nix-containers`) | build-verify (`nix eval` / `nix build`) before switch; control-plane changes need quorum checks |
 
 ## Keep AGENTS.md current

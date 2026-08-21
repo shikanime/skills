@@ -1,6 +1,8 @@
 ---
 name: sk-triage
-description: "Route a shikanime org triage request to sk-triage-issue, sk-triage-pr, or sk-triage-discussion."
+description:
+  "Route a shikanime org triage request to sk-triage-issue, sk-triage-pr, or
+  sk-triage-discussion."
 version: 0.2.0
 author: Hermes Agent
 license: Apache-2.0
@@ -16,8 +18,8 @@ Identify the item kind, then load the matching subskill and follow it.
 ## Inputs
 
 - `N` : issue, PR, or discussion number.
-- `R` : `OWNER/REPO` under `shikanime-labs/*` or `shikanime-studio/*`.
-  Defaults to the `origin` remote of the cwd; if not in such a repo, ask.
+- `R` : `OWNER/REPO` under `shikanime-labs/*` or `shikanime-studio/*`. Defaults
+  to the `origin` remote of the cwd; if not in such a repo, ask.
 
 ## Routing
 
@@ -32,9 +34,9 @@ else
 fi
 ```
 
-- `KIND=pr`          → load `sk-triage-pr`
-- `KIND=issue`       → load `sk-triage-issue`
-- `KIND=discussion`  → load `sk-triage-discussion`
+- `KIND=pr` → load `sk-triage-pr`
+- `KIND=issue` → load `sk-triage-issue`
+- `KIND=discussion` → load `sk-triage-discussion`
 
 If the user already named the kind ("triage PR #5"), skip detection and load
 directly. English conventions throughout (see `sk-issue`, `sk-pr`,

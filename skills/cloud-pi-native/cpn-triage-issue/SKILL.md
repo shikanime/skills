@@ -1,6 +1,8 @@
 ---
 name: cpn-triage-issue
-description: "Triage une issue existante du dépôt cloud-pi-native/console : labels, assignee, jalon, projet ; fermeture motivée si non traitable."
+description:
+  "Triage une issue existante du dépôt cloud-pi-native/console : labels,
+  assignee, jalon, projet ; fermeture motivée si non traitable."
 version: 0.1.0
 author: Hermes Agent
 license: Apache-2.0
@@ -11,8 +13,8 @@ metadata:
 
 # CPN Issue Triage
 
-Trier une issue existante de `cloud-pi-native/console` : renseigner chaque
-champ de métadonnées **vide sur l'issue** et **déterminable depuis son propre
+Trier une issue existante de `cloud-pi-native/console` : renseigner chaque champ
+de métadonnées **vide sur l'issue** et **déterminable depuis son propre
 contenu**. Conventions françaises (voir `cpn-issue`). Ne jamais inventer une
 valeur que le dépôt ne possède pas.
 
@@ -45,8 +47,8 @@ gh api repos/"$R"/assignees --jq '.[].login'     # qui peut être assigné
 
 ### 3. Décider chaque champ (appliquer seulement si vide + valeur existante)
 
-- **labels** — déduire du préfixe conventionnel du titre :
-  `fix:`/`[BUG]`→`bug` ; `feat:`/`[REQUEST]`→`enhancement` ; `docs:`→`documentation` ;
+- **labels** — déduire du préfixe conventionnel du titre : `fix:`/`[BUG]`→`bug`
+  ; `feat:`/`[REQUEST]`→`enhancement` ; `docs:`→`documentation` ;
   `refactor:`→`refactor` ; `ci:`/`build:`→`ci` ; `perf:`→`performance` ;
   `chore:`→`chore`. Ajouter un label de zone depuis les chemins touchés
   seulement si un label correspondant existe. Écarter tout label absent de la

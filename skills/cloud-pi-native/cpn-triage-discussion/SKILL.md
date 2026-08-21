@@ -1,6 +1,8 @@
 ---
 name: cpn-triage-discussion
-description: "Triage une discussion existante du dépôt cloud-pi-native/console : catégorie, forme du corps, réponse Q&A, clôture de cycle (GraphQL)."
+description:
+  "Triage une discussion existante du dépôt cloud-pi-native/console : catégorie,
+  forme du corps, réponse Q&A, clôture de cycle (GraphQL)."
 version: 0.1.0
 author: Hermes Agent
 license: Apache-2.0
@@ -13,8 +15,8 @@ metadata:
 
 Trier une discussion existante de `cloud-pi-native/console`. Les discussions
 n'ont ni labels, ni assignees, ni jalons. Les seules métadonnées de triage sont
-la **catégorie** et le routage du cycle de vie. Conventions françaises.
-GraphQL uniquement.
+la **catégorie** et le routage du cycle de vie. Conventions françaises. GraphQL
+uniquement.
 
 ## Entrées
 
@@ -66,9 +68,8 @@ query {
 
 ## Pièges
 
-- Discussions GraphQL uniquement — pas de `gh issue edit`, pas de REST.
-  Utiliser l'enveloppe `--input` pour les mutations ; `-F variables=@file`
-  échoue.
+- Discussions GraphQL uniquement — pas de `gh issue edit`, pas de REST. Utiliser
+  l'enveloppe `--input` pour les mutations ; `-F variables=@file` échoue.
 - Recatégoriser sans avoir sondé `.has_discussions` — création/mutation 404
   quand désactivé.
 - Clôture silencieuse — toujours poster le commentaire de motif d'abord.

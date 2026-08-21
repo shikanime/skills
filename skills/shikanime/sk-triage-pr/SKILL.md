@@ -1,6 +1,8 @@
 ---
 name: sk-triage-pr
-description: "Triage an existing shikanime org PR: labels, assignee, milestone, reviewers, issue linkage."
+description:
+  "Triage an existing shikanime org PR: labels, assignee, milestone, reviewers,
+  issue linkage."
 version: 0.1.0
 author: Hermes Agent
 license: Apache-2.0
@@ -11,10 +13,10 @@ metadata:
 
 # Shikanime PR Triage
 
-Triage an existing PR in a `shikanime-labs/*` or `shikanime-studio/*` repo:
-set every metadata field that is **empty on the PR** and **determinable from
-the PR's own content**. English conventions. Never invent a value the repo does
-not have. PRs are never closed by triage.
+Triage an existing PR in a `shikanime-labs/*` or `shikanime-studio/*` repo: set
+every metadata field that is **empty on the PR** and **determinable from the
+PR's own content**. English conventions. Never invent a value the repo does not
+have. PRs are never closed by triage.
 
 ## Prerequisites
 

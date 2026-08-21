@@ -1,12 +1,15 @@
 ---
 name: sk-triage-discussion
-description: "Triage an existing shikanime org discussion: category, body shape, Q&A answer marking, lifecycle close (GraphQL)."
+description:
+  "Triage an existing shikanime org discussion: category, body shape, Q&A answer
+  marking, lifecycle close (GraphQL)."
 version: 0.1.0
 author: Hermes Agent
 license: Apache-2.0
 metadata:
   hermes:
-    tags: [GitHub, Triage, Discussions, GraphQL, shikanime-labs, shikanime-studio]
+    tags:
+      [GitHub, Triage, Discussions, GraphQL, shikanime-labs, shikanime-studio]
 ---
 
 # Shikanime Discussion Triage
@@ -63,8 +66,8 @@ query {
 
 ## Pitfalls
 
-- Discussions are GraphQL-only — no `gh issue edit`, no REST. Use the
-  `--input` envelope for mutations; `-F variables=@file` fails.
+- Discussions are GraphQL-only — no `gh issue edit`, no REST. Use the `--input`
+  envelope for mutations; `-F variables=@file` fails.
 - Recategorizing without probing `.has_discussions` first — creation/mutation
   404s when disabled.
 - Closing silently — always post the rationale comment first.

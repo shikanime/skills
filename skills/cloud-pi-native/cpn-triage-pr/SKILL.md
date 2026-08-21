@@ -1,6 +1,8 @@
 ---
 name: cpn-triage-pr
-description: "Triage une PR existante du dépôt cloud-pi-native/console : labels, assignee, jalon, reviewers, lien issue."
+description:
+  "Triage une PR existante du dépôt cloud-pi-native/console : labels, assignee,
+  jalon, reviewers, lien issue."
 version: 0.1.0
 author: Hermes Agent
 license: Apache-2.0
@@ -11,8 +13,8 @@ metadata:
 
 # CPN PR Triage
 
-Trier une PR existante de `cloud-pi-native/console` : renseigner chaque champ
-de métadonnées **vide sur la PR** et **déterminable depuis son propre contenu**.
+Trier une PR existante de `cloud-pi-native/console` : renseigner chaque champ de
+métadonnées **vide sur la PR** et **déterminable depuis son propre contenu**.
 Conventions françaises. Ne jamais inventer une valeur que le dépôt ne possède
 pas. Les PR ne sont jamais fermées par la triage.
 
@@ -45,8 +47,8 @@ gh api repos/"$R"/assignees --jq '.[].login'     # qui peut être assigné
 
 ### 3. Décider chaque champ (appliquer seulement si vide + valeur existante)
 
-- **labels** — déduire du préfixe conventionnel du titre :
-  `fix:`/`[BUG]`→`bug` ; `feat:`/`[REQUEST]`→`enhancement` ; `docs:`→`documentation` ;
+- **labels** — déduire du préfixe conventionnel du titre : `fix:`/`[BUG]`→`bug`
+  ; `feat:`/`[REQUEST]`→`enhancement` ; `docs:`→`documentation` ;
   `refactor:`→`refactor` ; `ci:`/`build:`→`ci` ; `perf:`→`performance` ;
   `chore:`→`chore`. Ajouter un label de zone depuis les chemins touchés
   seulement si un label correspondant existe. Écarter tout label absent de la

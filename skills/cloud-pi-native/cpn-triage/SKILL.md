@@ -1,6 +1,8 @@
 ---
 name: cpn-triage
-description: "Route a cloud-pi-native console triage request to cpn-triage-issue, cpn-triage-pr, or cpn-triage-discussion."
+description:
+  "Route a cloud-pi-native console triage request to cpn-triage-issue,
+  cpn-triage-pr, or cpn-triage-discussion."
 version: 0.2.0
 author: Hermes Agent
 license: Apache-2.0
@@ -11,8 +13,8 @@ metadata:
 
 # CPN Triage — Routeur
 
-Identifier le type d'élément, puis charger la sous-compétence correspondante
-et la suivre.
+Identifier le type d'élément, puis charger la sous-compétence correspondante et
+la suivre.
 
 ## Entrées
 
@@ -32,10 +34,10 @@ else
 fi
 ```
 
-- `KIND=pr`          → charger `cpn-triage-pr`
-- `KIND=issue`       → charger `cpn-triage-issue`
-- `KIND=discussion`  → charger `cpn-triage-discussion`
+- `KIND=pr` → charger `cpn-triage-pr`
+- `KIND=issue` → charger `cpn-triage-issue`
+- `KIND=discussion` → charger `cpn-triage-discussion`
 
-Si l'utilisateur a déjà nommé le type (« triage PR #5 »), sauter la détection
-et charger directement. Conventions françaises (voir `cpn-issue`, `cpn-pr`,
+Si l'utilisateur a déjà nommé le type (« triage PR #5 »), sauter la détection et
+charger directement. Conventions françaises (voir `cpn-issue`, `cpn-pr`,
 `cpn-discussion`). Ne jamais inventer une valeur que le dépôt ne possède pas.

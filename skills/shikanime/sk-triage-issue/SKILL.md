@@ -1,6 +1,8 @@
 ---
 name: sk-triage-issue
-description: "Triage an existing shikanime org issue: assign labels, assignee, milestone, project; close with rationale if not workable."
+description:
+  "Triage an existing shikanime org issue: assign labels, assignee, milestone,
+  project; close with rationale if not workable."
 version: 0.1.0
 author: Hermes Agent
 license: Apache-2.0
